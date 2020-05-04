@@ -1,0 +1,24 @@
+<!--pages/class/class.wxml-->
+<view class="classInt" style="height:{{navHeight}}px;">
+  <view style="top:{{navTop}}px" class="back" bindtap="back">
+    <image src="../../images/back.png"></image>
+  </view>
+</view>
+<view class="video">
+  <video src="{{pageData.lvideo}}" bindended="finishClass"></video>
+</view>
+<view class="classNav">
+  <view>课堂讨论</view>
+</view>
+<view class="com">
+  <view class="communication" wx:for="{{contentList}}" wx:key="key">
+    <view>{{item.uname}}</view>
+    <view>{{item.ucollage}}</view>
+    <view>{{item.dcontent}}</view>
+  </view>
+</view>
+
+<view class="talk">
+  <input bindinput="sendContent"></input>
+  <view class="send" bindtap="send">发送</view>
+</view>

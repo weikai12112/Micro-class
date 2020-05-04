@@ -1,0 +1,27 @@
+<!--pages/classList/classList.wxml-->
+<view class="classInt">
+  <view style="top:{{navTop}}px" class="back" bindtap="back">
+    <image src="../../images/back.png"></image>
+  </view>
+  <view class="Title">
+    <view class="classTitle">{{classList.cname}}</view>
+  </view>
+  <view>{{classList.ucollage}}  {{classList.uname}}</view>
+  <view>
+　　{{classList.cintroduce}}
+  </view>
+  <view class="addClass" bindtap="addPlan">加入学习计划</view>
+</view>
+<view class="classNav">
+  <view>课程目录</view>
+  <i class="iconfont icon-zengjia addClassBottom" bindtap="addClassBottom" style="display:{{addClassBottom == 0?'none':'block'}}"></i>
+  <view class="classEdit" style="display:{{addClassBottom == 1?'none':'flex'}}">
+    <input placeholder="节名" bindinput="className"></input>
+    <view class="iconfont icon-xiangji" bindtap="addVideo"></view>
+    <view bindtap="add">确定</view>
+  </view>
+</view>
+
+<view class="classList" wx:for="{{classList.lessonDetailDTOS[0].lessonDeatilDeatilDTOS}}">
+  <view bindtap="classVideo"  data-item="{{item}}">{{item.lname}}</view>
+</view>

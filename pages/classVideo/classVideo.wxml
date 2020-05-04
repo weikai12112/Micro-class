@@ -1,0 +1,29 @@
+<!--pages/classVideo/classVideo.wxml-->
+<view class="navbar" style="height:{{navHeight}}px;">
+  <view style="top:{{navTop}}px" class="back" bindtap="back">
+    <image src="../../images/back.png"></image>
+  </view>
+  <view class="title" style="top:{{navTop}}px">章节发布</view>
+</view>
+<view class="infoWrite">
+  <view>章节名称</view>
+  <input bindinput="cname"></input>
+</view>
+<view class="infoWrite">
+  <view>课程图片</view>
+  <i class="iconfont icon-tupian" bindtap='picture'></i>
+</view>
+<view class="infoWrite">
+  <view>年级</view>
+  <input bindinput="cgrade" placeholder="大一/大二/大三/大四"></input>
+</view>
+<view class="infoWrite">
+  <view>每日观看</view>
+  <input type="number" bindinput="crequirements"></input>
+  <view>节</view>
+</view>
+<view class="infoWrite">
+  <view>课程介绍</view>
+</view>
+<textarea class="textClass" bindinput="cintroduce"></textarea>
+<view class="send" bindtap="send">发布课程</view>

@@ -1,0 +1,38 @@
+/* pages/notes/notes.wxss */
+.navbar{
+  background-color: #0cc15a;
+  width: 100%;
+  color: white;
+}
+.title{
+  width: 25%;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.back>image{
+  width: 30px;
+  height: 20px;
+}
+.back{
+  position: absolute;
+  margin-left: 20px;
+}
+.note{
+  width: 100%;
+  height: 300px;
+}
+.send{
+  width: 90%;
+  line-height: 30px;
+  text-align: center;
+  color: white;
+  background-color: #57b82a;
+  border-radius: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: 30px;
+}

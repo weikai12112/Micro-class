@@ -1,0 +1,14 @@
+<!--pages/login/login.wxml-->
+<view class="navbar" style="height:{{navHeight}}px;">
+  <view class="title" style="top:{{navTop}}px">登录</view>
+</view>
+<view class="infoWrite">
+  <view>账号</view>
+  <input bindinput="number"></input>
+</view>
+<view class="infoWrite">
+  <view>密码</view>
+  <input type="password" bindinput="password"></input>
+</view>
+<view class="regist" bindtap="regist">注册</view>
+<view class="send" bindtap="login">进入微课堂</view>

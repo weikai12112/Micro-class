@@ -1,0 +1,107 @@
+/* pages/my/my.wxss */
+@import "../../myfont.wxss";
+.myBackground>image{
+  width: 100%;
+  height: 100%;
+}
+.myBackground{
+  height: 240px;
+}
+.title{
+  width: 25%;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: white;
+}
+.myInfo{
+  width: 90%;
+  height: 125px;
+  border-radius: 10px;
+  position: absolute;
+  top: 115px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: white;
+  -moz-box-shadow:0px 3px 10px rgb(131, 131, 131);
+  -webkit-box-shadow:0px 3px 10px rgb(131, 131, 131);
+  box-shadow:0px 3px 10px rgb(131, 131, 131) ;
+}
+.myInfo>view:nth-child(1){
+  margin-left: 55px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+.myInfo>view:nth-child(2){
+  margin-left: 60px;
+  color: #686868;
+  margin-top: 8px;
+}
+.myInfo>view:nth-child(3){
+  margin-left: 60px;
+  color: #b4b4b4;
+  margin-top: 5px;
+  font-size: 12px;
+}
+.todayClass{
+  border-bottom: 1px solid #e6e6e6;
+  line-height: 40px;
+  margin-top: 20px;
+  padding-left: 25px;
+}
+.iconfont{
+  float: left;
+  margin-right: 7px;
+}
+.todayClassA{
+  border-bottom: 1px solid #e6e6e6;
+  line-height: 40px;
+  padding-left: 25px;
+  display: flex;
+}
+.todayClassA>view:nth-child(3){
+  color: gray;
+  line-height: 40px;
+  font-size: 13px;
+  margin-left: 110px;
+
+}
+.class{
+  padding: 8px;
+  display: flex;
+}
+.classImg{
+  border-radius: 10px;
+  overflow: hidden;
+  width: 140px;
+  height: 100px;
+}
+.classImg>image{
+  width: 140px;
+  height: 100px;
+}
+.classTitle{
+  margin-left: 15px;
+}
+.classTitle>view:nth-child(1){
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.classTitle>view:nth-child(2){
+  font-size: 13px;
+  color: grey;
+}
+.todayClasses{
+  font-size: 13px;
+  color: grey;
+  margin-top: 12px;
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

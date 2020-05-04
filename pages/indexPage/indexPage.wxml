@@ -1,0 +1,67 @@
+<!--pages/indexPage/indexPage.wxml-->
+<view class="navbar" style="height:{{navHeight}}px;">
+  <view class="title" style="top:{{navTop}}px">微课堂</view>
+</view>
+
+<view class="gradeNavs">
+  <view id="0" class="{{currentTab ==0?'selectGradeNav':'gradeNav'}}" bindtap="switchNav">大一</view>
+  <view id="1" class="{{currentTab ==1?'selectGradeNav':'gradeNav'}}" bindtap="switchNav">大二</view>
+  <view id="2" class="{{currentTab ==2?'selectGradeNav':'gradeNav'}}" bindtap="switchNav">大三</view>
+  <view id="3" class="{{currentTab ==3?'selectGradeNav':'gradeNav'}}" bindtap="switchNav">大四</view>
+</view>
+<swiper current="{{currentTab}}" style="height:100%">
+  <swiper-item>
+    <view class="classes">
+      <block  wx:for='{{one}}' wx:key = "key">
+        <view class="class" id="{{item.cid}}" bindtap="classList">
+          <view class="classImage">
+            <image src="{{item.cpicture}}" mode="aspectFill"></image>
+          </view>
+          <view class="classTitle">{{item.cname}}</view>
+          <view class="classTeacher">{{item.uname}}</view>
+        </view>
+      </block>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class="classes">
+      <block  wx:for='{{two}}' wx:key = "key">
+        <view class="class" id="{{item.cid}}" bindtap="classList">
+          <view class="classImage">
+            <image src="{{item.cpicture}}" mode="aspectFill"></image>
+          </view>
+          <view class="classTitle">{{item.cname}}</view>
+          <view class="classTeacher">{{item.uname}}</view>
+        </view>
+      </block>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class="classes">
+      <block  wx:for='{{three}}' wx:key = "key">
+        <view class="class" id="{{item.cid}}" bindtap="classList">
+          <view class="classImage">
+            <image src="{{item.cpicture}}" mode="aspectFill"></image>
+          </view>
+          <view class="classTitle">{{item.cname}}</view>
+          <view class="classTeacher">{{item.uname}}</view>
+        </view>
+      </block>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class="classes">
+      <block  wx:for='{{four}}' wx:key = "key">
+        <view class="class" id="{{item.cid}}" bindtap="classList">
+          <view class="classImage">
+            <image src="{{item.cpicture}}" mode="aspectFill"></image>
+          </view>
+          <view class="classTitle">{{item.cname}}</view>
+          <view class="classTeacher">{{item.uname}}</view>
+        </view>
+      </block>
+    </view>
+  </swiper-item>
+</swiper>
+
+

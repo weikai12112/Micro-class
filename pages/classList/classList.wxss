@@ -1,0 +1,99 @@
+/* pages/classList/classList.wxss */
+@import "../../myfont.wxss";
+.back{
+  position: absolute;
+}
+.classInt{
+  background-color: #44a78a;
+  color: white;
+  padding: 20px;
+}
+.back>image{
+  width: 30px;
+  height: 20px;
+}
+
+.classTitle{
+  margin-top: 50px;
+  font-weight: 600;
+  font-size: 22px;
+}
+.classInt>view:nth-child(3){
+  font-size: 13px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+}
+.classNav>view:nth-child(1){
+  color: #0cc15a;
+  border-bottom: 2px solid #0cc15a;
+  line-height: 40px;
+  width: 80px;
+  text-align: center;
+  margin-left: 15px;
+}
+.classNav{
+  border-bottom: 1px solid #ececec;
+  display: flex;
+}
+.classList{
+  background-color: #f5f5f5;
+}
+.classList>view{
+  line-height: 35px;
+  padding-left: 15px;
+}
+.classList>view:hover{
+  background-color: #dedede;
+}
+.addClass{
+  border: 1px white solid;
+  line-height: 30px;
+  text-align: center;
+  width: 110px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+.addClass:hover{
+  border: 1px #44a78a solid;
+  background-color: white;
+  color: #44a78a;
+}
+.Title{
+  display: flex;
+}
+.addClassBottom{
+  line-height: 40px;
+  color: #0cc15a;
+  width: 40px;
+  text-align: center;
+}
+.hideBottom{
+  display:none
+}
+.classEdit{
+  display: flex;
+}
+.classEdit>input:nth-child(1){
+  line-height: 40px;
+  margin-top: 9px;
+  border-left: 1px solid #44a78a;
+  padding-left: 5px;
+  margin-left: 10px;
+
+}
+.classEdit>view:nth-child(2){
+  line-height: 40px;
+  color: #0cc15a;
+  width: 40px;
+  text-align: center;
+}
+.classEdit>view:nth-child(3){
+  color: white;
+  background-color: #0cc15a;
+  border: 1px solid #44a78a;
+  border-radius: 5px;
+  width: 50px;
+  line-height: 40px;
+  text-align: center;
+}

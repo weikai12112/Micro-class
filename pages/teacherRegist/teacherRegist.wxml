@@ -1,0 +1,24 @@
+
+<view class="navbar" style="height:{{navHeight}}px;">
+  <view style="top:{{navTop}}px" class="back" bindtap="back">
+    <image src="../../images/back.png"></image>
+  </view>
+  <view class="title" style="top:{{navTop}}px">学生注册</view>
+</view>
+<view class="infoWrite">
+  <view>姓名</view>
+  <input bindinput="name"></input>
+</view>
+<view class="infoWrite">
+  <view>学工号</view>
+  <input bindinput="number"></input>
+</view>
+<view class="infoWrite">
+  <view>任教学校</view>
+  <input bindinput="school"></input>
+</view>
+<view class="infoWrite">
+  <view>密码</view>
+  <input type="password" bindinput="password"></input>
+</view>
+<view class="send" bindtap="teacherRegist">注册</view>

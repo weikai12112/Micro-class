@@ -1,0 +1,60 @@
+.navbar{
+  background-color: #0cc15a;
+  width: 100%;
+  color: white;
+  margin-bottom: 30px;
+
+}
+.title{
+  width: 25%;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.infoWrite{
+  display: flex;
+  padding-right: 20px;
+  margin-bottom: 10px;
+}
+.infoWrite>view:nth-child(1){
+  width: 25%;
+  text-align: right;
+  line-height: 36px;
+  padding-right: 10px;
+}
+.infoWrite>input:nth-child(2){
+  width: 60%;
+  border: 1px solid #0cc15a;
+  border-radius: 5px;
+  margin-top: 3px;
+  padding: 3px;
+}
+.send{
+  width: 90%;
+  line-height: 30px;
+  text-align: center;
+  color: white;
+  background-color: #57b82a;
+  border-radius: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: 30px;
+
+}
+.regist{
+  color: gray;
+  text-align: right;
+  padding-right: 50px;
+  font-size: 14px;
+}
+.back>image{
+  width: 30px;
+  height: 20px;
+}
+.back{
+  position: absolute;
+  margin-left: 20px;
+}

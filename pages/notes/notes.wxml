@@ -1,0 +1,9 @@
+<!--pages/notes/notes.wxml-->
+<view class="navbar" style="height:{{navHeight}}px;">
+  <view style="top:{{navTop}}px" class="back" bindtap="back">
+    <image src="../../images/back.png"></image>
+  </view>
+  <view class="title" style="top:{{navTop}}px">我的笔记</view>
+</view>
+<textarea class="note" bindinput="edit" value="{{notes}}"></textarea>
+<view class="send" bindtap="save">保存</view>
