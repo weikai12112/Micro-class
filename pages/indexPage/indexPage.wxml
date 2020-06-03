@@ -9,7 +9,7 @@
   <view id="2" class="{{currentTab ==2?'selectGradeNav':'gradeNav'}}" bindtap="switchNav">大三</view>
   <view id="3" class="{{currentTab ==3?'selectGradeNav':'gradeNav'}}" bindtap="switchNav">大四</view>
 </view>
-<swiper current="{{currentTab}}" style="height:100%">
+<swiper current="{{currentTab}}" style="height:100%" bindchange="imgChange">
   <swiper-item>
     <view class="classes">
       <block  wx:for='{{one}}' wx:key = "key">

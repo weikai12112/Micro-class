@@ -105,3 +105,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.none{
+  display: none;
+}

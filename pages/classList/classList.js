@@ -57,6 +57,8 @@ Page({
           wx.showToast({
             title: '添加成功',
           })
+          wx.showNavigationBarLoading()
+          that.updateBlogs()
         }
       }
     })
@@ -96,32 +98,38 @@ Page({
         icon: 'none'
       })
     }
-    wx.request({
-      url: 'http://39.96.68.53:9898/LessonController/addCourse',
-      method:"POST",
+    wx.uploadFile({
+      url: 'http://39.96.68.53:9898/LessonController/addCourse', //仅为示例，非真实的接口地址  
+      filePath: that.data.video,
+      name: 'lvideo',
       header: {
-        'content-type': 'application/x-www-form-urlencoded',
+        "Content-Type": "multipart/form-data"
       },
-      data:{
-        lname:that.data.addName,
-        lvideo:that.data.video,
-        chapter_id:1,
-        chapter_name:1,
-        cid:that.data.cid
+      formData: {
+        lname: that.data.addName,
+        chapter_id: 1,
+        chapter_name: 1,
+        cid: that.data.cid
       },
-      success:function(res){
-        if(res.data.code ==200){
+      success: function (res) {
+        var data = JSON.parse(res.data)
+        if (data.code == 200) {
           wx.showToast({
             title: '上传成功',
           })
-          setTimeout(function(){
+          setTimeout(function () {
             wx.showNavigationBarLoading()
             that.updateBlogs()
-          },1000)
+          }, 1000)
         }
+      },
+      complete: function (res) {
+        
+
       }
     })
   },
+    
   classVideo:function(e){
     var i = e.currentTarget.dataset.item;
     i.cid = this.data.cid

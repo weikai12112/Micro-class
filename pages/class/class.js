@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    content:''
   },
   sendContent:function(a){
     this.setData({
@@ -63,8 +63,13 @@ Page({
   send:function(){
     
     var that = this
-    console.log(that.data.pageData.lid)
-    
+    console.log(this.data.content)
+    if(this.data.content == ''){
+      return wx.showToast({
+        title: '不可发送空值',
+        icon:"none"
+      })
+    }
     wx.request({
       url: 'http://39.96.68.53:9898/DiscussionController/addDiscussion',
       method: 'POST',

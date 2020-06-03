@@ -3,7 +3,7 @@
   <view style="top:{{navTop}}px" class="back" bindtap="back">
     <image src="../../images/back.png"></image>
   </view>
-  <view class="title" style="top:{{navTop}}px">学生注册</view>
+  <view class="title" style="top:{{navTop}}px">教师注册</view>
 </view>
 <view class="infoWrite">
   <view>姓名</view>

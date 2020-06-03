@@ -34,6 +34,11 @@ Page({
       url: '../classList/classList',
     })
   },
+  imgChange:function(a){
+    this.setData({
+      currentTab: a.detail.current
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

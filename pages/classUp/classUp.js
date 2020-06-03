@@ -31,8 +31,9 @@ Page({
           console.log(tempFilePaths)
         }
         that.setData({
-          picture: picture
+          picture: res.tempFilePaths
         })
+        console.log(that.data)
       },
     })
   },
@@ -61,7 +62,6 @@ Page({
     var sendData = {
       uid: this.data.data.uid,
       cname:this.data.cname,
-      cpicture: this.data.picture,
       cintroduce: this.data.cintroduce,
       cgrade: this.data.cgrade,
       crequirements: this.data.crequirements
@@ -76,15 +76,18 @@ Page({
         })
       }
     }
-    wx.request({
-      url: 'http://39.96.68.53:9898/CourseController/addCourse',
-      method: 'POST',
-      data: sendData,
+    wx.uploadFile({
+      url: 'http://39.96.68.53:9898/CourseController/addCourse', //仅为示例，非真实的接口地址  
+      filePath: that.data.picture[0],
+      name: 'cpicture',
       header: {
-        'content-type': 'application/x-www-form-urlencoded',
+        "Content-Type": "multipart/form-data"
       },
+      formData: sendData,
       success: function (res) {
-        if (res.data.code == 200) {
+        console.log(JSON.parse(res.data))
+        var data = JSON.parse(res.data)
+        if (data.code == 200) {
           wx.showToast({
             title: '上传成功',
           })
@@ -101,13 +104,17 @@ Page({
           }, 1000)
         } else {
           wx.showToast({
-            title: res.data.msg,
+            title: '上传失败',
             icon: 'none'
           })
-          
+
         }
+      },
+      complete: function (res) {
+        
       }
     })
+  
   },
   /**
    * 生命周期函数--监听页面加载

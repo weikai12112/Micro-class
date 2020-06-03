@@ -12,10 +12,13 @@
   <view class="iconfont icon-chuangzuo"></view>
   学习笔记
 </view>
-<view class="todayClassA">
+<view class="todayClassA"style="display:{{data.type == 0?'block':'none'}}">
   <view class="iconfont icon-dingdan"></view>
   <view>今日学习计划</view>
-  <view bindtap="sendClass">{{identy[data.type]}}</view>
+</view>
+<view class="todayClassA"style="display:{{data.type == 1?'block':'none'}}"  bindtap="sendClass">
+  <view class="iconfont icon-dingdan"></view>
+  <view>发布课程</view>
 </view>
 <view wx:for="{{todayList}}" wx:for-item='item' wx:key="key">
   <view class="class" bindtap="classList" id="{{item.cid}}">

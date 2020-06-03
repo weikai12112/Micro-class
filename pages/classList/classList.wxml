@@ -10,13 +10,13 @@
   <view>
 　　{{classList.cintroduce}}
   </view>
-  <view class="addClass" bindtap="addPlan">加入学习计划</view>
+  <view class="addClass" bindtap="addPlan" style="display:{{classList.lid == '0'?'none':'block'}}">加入学习计划</view>
 </view>
 <view class="classNav">
   <view>课程目录</view>
   <i class="iconfont icon-zengjia addClassBottom" bindtap="addClassBottom" style="display:{{addClassBottom == 0?'none':'block'}}"></i>
-  <view class="classEdit" style="display:{{addClassBottom == 1?'none':'flex'}}">
-    <input placeholder="节名" bindinput="className"></input>
+  <view class="classEdit" style="display:{{addClassIpt == 1?'none':'flex'}}">
+    <input placeholder="节名" bindinput="className" placeholder="(视频支持mp4)"></input>
     <view class="iconfont icon-xiangji" bindtap="addVideo"></view>
     <view bindtap="add">确定</view>
   </view>
